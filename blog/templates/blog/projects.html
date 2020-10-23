@@ -1,0 +1,31 @@
+{% extends 'base/base.html' %}
+{% load make_action %}
+
+{% block content %}
+
+{% if request.path == "/projects/" %}
+    {% set_var " aria-current='true'" as ariaprojects %}
+{% endif %}
+
+{% if request.path == "/projects/" or request.path == "/projects/1/" %}
+    {% set_var 'newer_button' as hide_newer %}
+{% endif %}
+
+<main class="projects">
+<nav class="body_nav">
+<ul>
+<li class="body_nav" id="{{ hide_newer }}"><a href="{% url 'projects' %}{{ newer }}">previous</a></li>
+<li>Page {{ page_number }}</li>
+<li class="body_nav"><a href="{% url 'projects'%}{{ older }}">next</a></li>
+</nav>
+{% for project in posts %}
+
+    <article class ="projects">
+        <p>{{ project.published_date }}</p>
+        <h2>{{ project.title }}</h2>
+        <p>{{ project.description|linebreaksbr }}</p>
+    <button class="project_link"><a href="{% url 'project_detail' pk=project.pk %}">Continue to project</a></button>
+    </article>
+{% endfor %}
+</main>
+{% endblock %}

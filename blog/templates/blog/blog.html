@@ -1,0 +1,34 @@
+{% extends 'base/base.html' %}
+{% load make_action %}
+
+{% block content %}
+
+
+{% if request.path == "/" or request.path == "/1/" %}
+    {% set_var 'newer_button' as hide_newer %}
+{% endif %}
+
+<main class ="blog">
+<nav class="body_nav">
+<ul>
+<li class="body_nav" id="{{ hide_newer }}"><a href="/{{ newer }}">newer posts</a></li>
+<li>Page {{ page_number }}</li>
+<li class="body_nav"><a href="/{{ older }}">older posts</a></li>
+
+</nav>
+
+{% for post in posts %}
+
+    <article class ="blog">
+        <p>{{ post.published_date }}</p>
+        <h2>{{ post.title }}</h2> 
+        <p>{% autoescape off%}{{ post.text|linebreaksbr }}{% endautoescape %}</p><br>
+
+    </article>
+{% endfor %}
+
+
+</main>
+{% endblock %}
+
+

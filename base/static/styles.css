@@ -1,0 +1,168 @@
+/*This is a CSS comment*/
+
+html {
+    word-wrap: break-word;
+    background-color: #1F1A24;
+}
+
+
+article {
+    background-color: #111718;
+    margin-bottom: 20px;
+    width: 100%;
+    border: solid 0.5px #2e4346;
+    border-radius: 0.5rem;
+    padding: 10px;
+}
+
+article.projects {
+    width: 46%;
+    position: relative;
+}
+
+
+h2 {
+   text-align: center;
+}
+
+
+body {
+    color: #eceff0;
+    font-size: 20px;
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Open Sans", serif, sans-serif;
+}
+
+
+main {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+    color: #eceff0;
+
+}
+
+main.blog, main.project_detail {
+    max-width: 48rem;
+}
+
+main.projects {
+    max-width: 56rem;
+}
+
+h1 {
+    color:  #e7ddd7;
+    text-align: center;
+    font-size: 44px;
+    margin: 0;
+    padding-top: 18px;
+    background-color:  #121212;
+    padding-bottom: 10px;
+}
+
+h2 {
+    color: #e9cf9c;
+}
+
+button.project_link {
+    background-color: #3700B3;
+    left: 33%;
+    border: none;    
+    border-radius: 0.5rem;
+    position: relative;
+    border: solid 1px #2e4346;;
+}
+
+button.project_link a {
+    padding: 8px;
+    background-color: #3700B3;
+}
+
+button.project_link a:hover {
+    background-color: #1bc6b6;
+}
+
+a {
+    color: beige;
+    text-decoration: none;
+    display: block;
+    border-radius: 0.5rem;
+}
+
+
+a:hover {
+    background-color: #1bc6b6;
+}
+
+
+nav.body_nav {
+    height: 60px;
+    font-size: 16px;
+}
+
+nav.body_nav ul li {
+    list-style-type: none;
+    text-align: center;
+    line-height: 30px;
+    min-width: 100px;
+}
+
+li {
+    border-radius: 0.5rem;
+}
+
+li.body_nav {
+    background-color: #3700B3;
+    border: solid 1px #2e4346;
+    
+}
+
+nav.global ul {
+    background-color:  #332950;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 20px 0;
+    border: solid 1px #2e4346;;
+    font-size: 18px;
+}
+
+nav.body_nav {
+    width: 100%;
+}
+
+
+nav.global ul li {
+    list-style-type: none;
+    text-align: center;
+    line-height: 40px;
+    min-width: 150px;
+
+}
+
+nav.body_nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0;
+}
+
+li.logo a.logo, li.logo:hover {
+    margin: 0;
+    height: 25px;
+    width: 120px;
+    background-color: none;
+}
+
+
+nav.body_nav ul li {
+    list-style-type: none;
+}
+
+
+#newer_button {
+    visibility: hidden;
+}

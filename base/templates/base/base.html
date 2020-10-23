@@ -1,0 +1,38 @@
+{% load static %}
+{% load make_action %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>SBG</title>
+  <meta name="author" content="Stefan Bush-Gordon"/>
+  <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+  <link rel="preload" href="background.jpg" as="background">
+</head>
+<body>
+  <header> 
+     <h1>Stefan Bush-Gordon</h1>
+     <nav class="global">
+      <ul>
+      {% if request.path == "/" %}
+          {% set_var " aria-current='true'" as ariahome %}
+      {% endif %}
+            <li class="logo"><a class="logo" target="_blank" href="https://www.djangoproject.com"><img src="https://www.djangoproject.com/m/img/badges/djangoproject120x25.gif" border="0" alt="A Django project." title="A Django project."></a></li>
+            <li{{ ariahome }}><a href="{% url 'blog' %}">Home</a></li>
+            <li{{ ariaprojects }}><a href="{% url 'projects' %}">Projects</a></li>
+            <li><a href="https://github.com/SBGordon" target="_blank">GitHub profile</a></li>
+            <li{{ ariacontact }}><a href="{% url 'contact' %}">Contact</a></li>
+   
+      </ul>
+    </nav>
+  </header>
+  
+  {% block content %}
+  {% endblock %}
+
+  </body>
+  </html>
+  
+

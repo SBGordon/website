@@ -1,0 +1,128 @@
+/*This is a CSS comment*/
+
+html {
+    background-color: #191a47;
+    word-wrap: break-word;
+
+}
+
+article {
+    background-color: #0e071f;
+    margin-bottom: 10px;
+}
+
+article.blog_detail {
+    background-color: #0e071f;
+    width: 100%;
+}
+
+article.posts {
+    width: 100%;
+}
+
+article.projects_base {
+    width: 49.5%;
+    height: 400px;
+}
+
+
+h2 {
+   text-align: center;
+}
+
+a {
+    color: orange;
+}
+
+body {
+    color: orange;
+    font-size: 16px;
+    margin: 0;
+    min-height: 100vh;
+}
+
+p {
+    color: beige;
+
+}
+
+
+main {
+    max-width: 56rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+
+}
+h1 {
+    text-align: center;
+    font-size: 40px;
+    margin: 0;
+    border: 0;
+    padding-top: 18px;
+}
+
+nav.global {
+    background-color: #0e071f;
+    margin: 0;
+}
+
+
+nav ul li a {
+    color: beige;
+    text-decoration: none;
+    display: block;
+    border-bottom: solid orange 2px;
+    border-radius: 0.5rem;
+        
+
+}
+
+nav ul li a:hover {
+    background-color: #0f092a;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#newer_button {
+    visibility: hidden;
+}
+
+nav ul li, nav.archive_nav ul li {
+    list-style-type: none;
+    flex-basis: 12%;
+    text-align: center;
+    line-height: 40px;
+    border-bottom: 2px solid transparent;
+    min-width: 100px;
+
+}
+
+nav.base_nav, nav.archive_nav {
+    width: 100%;
+}
+
+nav.base_nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+nav.archive_nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0;
+}
+
+nav.archive_nav ul li {
+    list-style-type: none;
+ 
+}

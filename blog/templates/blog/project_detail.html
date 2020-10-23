@@ -1,0 +1,19 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+<main class="project_detail">
+<nav class="body_nav">
+<ul><li class="body_nav">
+<a href="javascript:history.back()">return to projects</a></li></ul>
+</nav>
+    <article class="posts">
+        {% if project.published_date %}
+
+                {{ project.published_date }}
+
+        {% endif %}
+        <h2>{{ project.title }}</h2>
+        <p>{{ project.text|linebreaksbr }}</p>
+        </article>
+</main>
+{% endblock %}
